@@ -1,0 +1,41 @@
+# Directory di build
+bin/
+obj/
+Debug/
+Release/
+
+# File compilati
+*.dll
+*.pdb
+*.exe
+*.obj
+*.o
+*.so
+*.dylib
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.sln.docstates
+*.vcxproj.user
+
+# Backup files
+*.backup
+*.bak
+*~
+
+# Repository C&C Remastered (se clonato nella stessa directory)
+../CnC_Remastered_Collection/
+
+# Log files
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.temp

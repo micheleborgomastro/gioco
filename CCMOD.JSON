@@ -1,0 +1,35 @@
+{
+  "name": "CheatMod - Shortcut Personalizzate",
+  "author": "Community Mod",
+  "version": "1.0.0",
+  "description": "Mod che aggiunge shortcut personalizzate per modificare parametri di gioco come soldi, energia, e costruzione istantanea. Include Ctrl+M per soldi, Ctrl+P per energia, Ctrl+B per costruzione istantanea e altro.",
+  "game": "TD",
+  "dllName": "TiberianDawn.dll",
+  "type": "GAMEPLAY",
+  "requiredVersion": "1.0",
+  "website": "https://github.com/electronicarts/CnC_Remastered_Collection",
+  "compatibility": {
+    "singleplayer": true,
+    "multiplayer": false,
+    "skirmish": true
+  },
+  "features": [
+    "Shortcut per aggiungere crediti (Ctrl+M, Ctrl+Shift+M)",
+    "Energia illimitata (Ctrl+P)",
+    "Sblocco unità (Ctrl+U)",
+    "Costruzione istantanea (Ctrl+B)",
+    "Ricerca istantanea (Ctrl+R)",
+    "God Mode - Unità invincibili (Ctrl+G)"
+  ],
+  "changelog": [
+    {
+      "version": "1.0.0",
+      "date": "2025-12-27",
+      "changes": [
+        "Release iniziale",
+        "Implementate shortcut base per soldi e parametri di gioco",
+        "Supporto per Tiberian Dawn"
+      ]
+    }
+  ]
+}
