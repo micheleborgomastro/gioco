@@ -23,31 +23,35 @@ Questa mod aggiunge le seguenti shortcut durante il gioco:
 
 ## Installazione
 
-> **⚠️ IMPORTANTE**: Non esiste una DLL pre-compilata. Devi compilare la mod dal codice sorgente.
+### 🚀 Metodo Automatico (CONSIGLIATO!)
 
-### Compilazione e Installazione
+**La soluzione più semplice** - Tutto automatico in 1 click!
 
-1. Clona il repository ufficiale di C&C Remastered:
-   ```bash
-   git clone https://github.com/electronicarts/CnC_Remastered_Collection.git
-   ```
+1. Assicurati di avere Visual Studio 2017 e Git installati
+2. **Doppio click** su `autopatcher.bat`
+3. Aspetta che finisca (10-30 minuti)
+4. Fatto! 🎉
 
-2. Copia i file modificati da questo progetto:
-   - `src/CONQUER_CHEAT_MOD.CPP` → `TIBERIANDAWN/`
-   - `src/CHEAT_MOD.H` → `TIBERIANDAWN/`
+> 📖 **Istruzioni dettagliate**: Vedi [README_AUTOPATCHER.md](README_AUTOPATCHER.md)
 
-3. Modifica `TIBERIANDAWN/CONQUER.CPP` per includere il nostro codice (vedi istruzioni sotto)
+Lo script farà **TUTTO AUTOMATICAMENTE**:
+- ✅ Clona il repository C&C
+- ✅ Copia i file della mod
+- ✅ Patcha automaticamente CONQUER.CPP (nessuna modifica manuale!)
+- ✅ Compila la DLL
+- ✅ Installa la mod
 
-4. Apri `CnCRemastered.sln` in Visual Studio 2017
+### 🔧 Metodo Manuale (per esperti)
 
-5. Vai su Build → Batch Build → Select All → Rebuild
+Se preferisci fare tutto manualmente o vuoi personalizzare la mod:
 
-6. I file compilati saranno in `bin/`
+1. Clona il repository ufficiale di C&C Remastered
+2. Copia i file della mod
+3. Applica le modifiche seguendo `src/PATCH_INSTRUCTIONS.md`
+4. Compila con Visual Studio 2017
+5. Installa manualmente
 
-7. Copia `TiberianDawn.dll` e `TiberianDawn.pdb` in:
-   `Documents\CnCRemastered\Mods\CheatMod\`
-
-8. Copia `CCMOD.JSON` nella stessa cartella
+> 📖 **Istruzioni complete**: Vedi [QUICKSTART.md](QUICKSTART.md)
 
 ## Struttura del Progetto
 

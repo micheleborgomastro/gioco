@@ -2,7 +2,19 @@
 
 Una guida veloce per iniziare subito con la mod!
 
-## Setup Rapido (30-60 minuti)
+## 🚀 SOLUZIONE PIÙ SEMPLICE: AutoPatcher
+
+**NUOVO!** Ora puoi installare tutto automaticamente con 1 click!
+
+👉 **Vai a [README_AUTOPATCHER.md](README_AUTOPATCHER.md)** per le istruzioni dell'autopatcher.
+
+L'AutoPatcher fa **TUTTO AUTOMATICAMENTE**: patching, compilazione e installazione!
+
+---
+
+## Setup Manuale (30-60 minuti)
+
+_Se preferisci fare tutto manualmente o hai bisogno di personalizzare la mod._
 
 ### ⚠️ IMPORTANTE: Compilazione Richiesta
 
