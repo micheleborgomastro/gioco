@@ -23,14 +23,9 @@ Questa mod aggiunge le seguenti shortcut durante il gioco:
 
 ## Installazione
 
-### Opzione 1: Usa la DLL Pre-compilata (Semplice)
+> **⚠️ IMPORTANTE**: Non esiste una DLL pre-compilata. Devi compilare la mod dal codice sorgente.
 
-1. Scarica `TiberianDawn.dll` dalla cartella `bin/` di questo progetto
-2. Copia il file in: `Documents\CnCRemastered\Mods\CheatMod\`
-3. Copia anche il file `CCMOD.JSON` nella stessa cartella
-4. Avvia il gioco e attiva la mod dal menu Mod Manager
-
-### Opzione 2: Compila da Sorgente
+### Compilazione e Installazione
 
 1. Clona il repository ufficiale di C&C Remastered:
    ```bash
@@ -59,15 +54,19 @@ Questa mod aggiunge le seguenti shortcut durante il gioco:
 ```
 gioco/
 ├── README.md                    # Questo file
+├── QUICKSTART.md                # Guida rapida per iniziare
 ├── CCMOD.JSON                   # Configurazione della mod
+├── build.bat / build.sh         # Script di build automatici
 ├── src/                         # Codice sorgente della mod
 │   ├── CONQUER_CHEAT_MOD.CPP   # Implementazione delle shortcut
 │   ├── CHEAT_MOD.H             # Header con le dichiarazioni
-│   └── PATCH_INSTRUCTIONS.md   # Istruzioni per applicare le modifiche
-├── bin/                         # DLL compilate (non incluse nel repo)
+│   └── PATCH_INSTRUCTIONS.md   # Istruzioni dettagliate per compilazione
+├── bin/                         # DLL compilate (vuoto - da generare)
 └── docs/                        # Documentazione aggiuntiva
     └── SHORTCUTS.md            # Lista completa delle shortcut
 ```
+
+> **Nota**: La cartella `bin/` è vuota nel repository. Le DLL vengono generate dopo la compilazione.
 
 ## Come Funziona
 

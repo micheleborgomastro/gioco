@@ -2,26 +2,28 @@
 
 Una guida veloce per iniziare subito con la mod!
 
-## Setup Rapido (5 minuti)
+## Setup Rapido (30-60 minuti)
+
+### ⚠️ IMPORTANTE: Compilazione Richiesta
+
+**NON esiste una DLL pre-compilata disponibile per il download.**
+
+Devi compilare la mod dal codice sorgente seguendo i passi sotto.
+Questo richiede Windows, Visual Studio 2017, e circa 30-60 minuti per il setup completo.
 
 ### Prerequisiti
 
 Assicurati di avere:
-- ✅ Command & Conquer Remastered Collection (su Steam)
-- ✅ Visual Studio 2017 con Windows SDK 8.1
+- ✅ Command & Conquer Remastered Collection (acquistato su Steam)
+- ✅ Windows (la compilazione richiede Visual Studio 2017)
+- ✅ Visual Studio 2017 con:
+  - Windows SDK 8.1
+  - MFC (Microsoft Foundation Classes)
+  - C++ Build Tools
 - ✅ 10 GB di spazio libero su disco
+- ✅ Git installato
 
-### Opzione 1: Usa la DLL Pre-compilata (PIÙ VELOCE)
-
-> **Nota**: Attualmente non è disponibile una DLL pre-compilata. Devi compilare la mod seguendo l'Opzione 2.
-
-1. Scarica `TiberianDawn.dll` dalla sezione Releases
-2. Crea la cartella: `Documents\CnCRemastered\Mods\CheatMod\`
-3. Copia `TiberianDawn.dll` e `CCMOD.JSON` nella cartella
-4. Avvia il gioco → Mod Manager → Attiva "CheatMod"
-5. Gioca! 🎮
-
-### Opzione 2: Compila da Codice Sorgente
+### Compilazione da Codice Sorgente
 
 #### Passo 1: Clone dei Repository
 
