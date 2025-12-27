@@ -42,14 +42,23 @@ REM ============================================================================
 
 set "CNC_REPO=..\CnC_Remastered_Collection"
 set "SOLUTION=%CNC_REPO%\CnCRemastered.sln"
-set "MSBUILD=C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe"
+set "MSBUILD="
 set "OUTPUT_DIR=bin"
 set "MOD_INSTALL_DIR=%USERPROFILE%\Documents\CnCRemastered\Mods\CheatMod"
 
-REM Cerca MSBuild in diverse posizioni
-if not exist "%MSBUILD%" set "MSBUILD=C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\MSBuild\15.0\Bin\MSBuild.exe"
-if not exist "%MSBUILD%" set "MSBUILD=C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\MSBuild.exe"
-if not exist "%MSBUILD%" set "MSBUILD=C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\MSBuild.exe"
+REM Cerca MSBuild in diverse posizioni - inizia dalle versioni più recenti
+REM Visual Studio 2022
+if exist "C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\MSBuild.exe" set "MSBUILD=C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\MSBuild.exe"
+if exist "C:\Program Files\Microsoft Visual Studio\2022\Professional\MSBuild\Current\Bin\MSBuild.exe" set "MSBUILD=C:\Program Files\Microsoft Visual Studio\2022\Professional\MSBuild\Current\Bin\MSBuild.exe"
+if exist "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\MSBuild\Current\Bin\MSBuild.exe" set "MSBUILD=C:\Program Files\Microsoft Visual Studio\2022\Enterprise\MSBuild\Current\Bin\MSBuild.exe"
+
+REM Visual Studio 2019
+if not defined MSBUILD if exist "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\MSBuild.exe" set "MSBUILD=C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\MSBuild.exe"
+if not defined MSBUILD if exist "C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\MSBuild.exe" set "MSBUILD=C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\MSBuild.exe"
+
+REM Visual Studio 2017
+if not defined MSBUILD if exist "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe" set "MSBUILD=C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe"
+if not defined MSBUILD if exist "C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\MSBuild\15.0\Bin\MSBuild.exe" set "MSBUILD=C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\MSBuild\15.0\Bin\MSBuild.exe"
 
 REM ============================================================================
 REM [1/6] Verifica Prerequisiti
@@ -59,16 +68,24 @@ echo [1/6] Verifica prerequisiti...
 echo.
 
 REM Verifica MSBuild
-if not exist "%MSBUILD%" (
+if not defined MSBUILD (
     echo [ERRORE] MSBuild non trovato!
     echo.
-    echo Visual Studio 2017 deve essere installato con:
-    echo  - C++ Build Tools
+    echo ATTENZIONE: Visual Studio Code NON e' sufficiente!
+    echo Hai bisogno di Visual Studio (IDE completo^) con C++.
+    echo.
+    echo Visual Studio 2017/2019/2022 deve essere installato con:
+    echo  - Sviluppo di applicazioni desktop con C++
     echo  - Windows SDK 8.1
     echo  - MFC (Microsoft Foundation Classes^)
     echo.
-    echo Scarica Visual Studio 2017 da:
-    echo https://visualstudio.microsoft.com/vs/older-downloads/
+    echo Download Visual Studio 2022 Community (GRATUITO^):
+    echo https://visualstudio.microsoft.com/it/downloads/
+    echo.
+    echo Oppure esegui 'verifica_prerequisiti.bat' per controllare
+    echo tutti i prerequisiti e ricevere link diretti.
+    echo.
+    echo Consulta PREREQUISITI.md per istruzioni dettagliate.
     echo.
     pause
     exit /b 1

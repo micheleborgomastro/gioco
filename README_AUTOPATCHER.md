@@ -9,14 +9,28 @@ Hai chiesto, ho creato! Ora puoi installare la mod **AUTOMATICAMENTE** senza mod
 Prima di eseguire l'autopatcher, assicurati di avere:
 
 1. **Windows** (lo script è per Windows)
-2. **Visual Studio 2017** installato con:
-   - C++ Build Tools
+2. **Visual Studio 2017/2019/2022** installato con:
+   - Sviluppo di applicazioni desktop con C++
    - Windows SDK 8.1
    - MFC (Microsoft Foundation Classes)
 3. **Git** installato ([Download Git](https://git-scm.com/download/win))
 4. **Command & Conquer Remastered Collection** su Steam
 
-> **Nota**: Se non hai Visual Studio 2017, scaricalo da [qui](https://visualstudio.microsoft.com/vs/older-downloads/)
+> ⚠️ **IMPORTANTE**: **Visual Studio Code NON è sufficiente!** Hai bisogno di **Visual Studio** (IDE completo).
+
+### 🔍 Non Sei Sicuro di Avere Tutto?
+
+**Esegui prima questo script:**
+```cmd
+verifica_prerequisiti.bat
+```
+
+Ti dirà esattamente cosa hai installato e cosa manca, con link diretti per scaricare i componenti mancanti!
+
+### 📖 Guida Completa ai Prerequisiti
+
+Per istruzioni dettagliate sull'installazione di tutti i prerequisiti, consulta:
+**[PREREQUISITI.md](PREREQUISITI.md)** - Guida passo-passo con link diretti e troubleshooting
 
 ## 🎯 Installazione in 3 Passi
 
