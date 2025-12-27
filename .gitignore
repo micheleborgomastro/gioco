@@ -1,5 +1,7 @@
 # Directory di build
-bin/
+bin/*
+!bin/*.md
+!bin/README.md
 obj/
 Debug/
 Release/
